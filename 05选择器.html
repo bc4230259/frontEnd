@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+    p {
+      /*p{} 元素选择器*/
+      color: white;
+    }
+            /*.+className
+            class 选择器
+            特点：1.可以给多个标签命名同一个class名
+            2.可以给一个标签多个class名*/
+    .one{
+      color: blue;
+    }
+    .two{
+      background-color: yellow;
+    }
+    /*#+idName
+    id选择器
+    特点:每个ID名都是唯一的*/
+    #first{
+      color: green;
+    }
+  </style>
+</head>
+<body>
+<p>hello world</p>
+<p class="one two">hello world</p>
+<p class="one">hello world</p>
+<p class="one">hello world</p>
+<p id="first">hello world</p>
+<p>hello world</p>
+</body>
+</html>
