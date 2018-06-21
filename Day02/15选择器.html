@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器</title>
+  <style>
+    <!--分组选择器 -->
+    div,p,h1{
+      color:red;
+    }
+    /*后代选择器
+    .parent>h1{}
+    选择parent之后的直接h1子元素
+    .parent h1{}
+    选择parent之后的所有h1元素
+    */
+    .parent>h1{
+      color:green;
+    }
+  </style>
+</head>
+<body>
+<div>div</div>
+<p>hello world</p>
+<h1>h1</h1>
+
+<div class="parent">
+  <h1>hello world</h1>
+  <h1>hello world</h1>
+  <h1>hello world</h1>
+  <h1>hello world</h1>
+  <h1>hello world</h1>
+  <div>
+    <h1>hello world</h1>
+  </div>
+</div>
+</body>
+</html>

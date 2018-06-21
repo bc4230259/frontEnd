@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .one{
+      /*子元素不给width，它会继承父元素的宽度
+      只发生在块元素之间*/
+      height: 468px;
+      background-color: #eee;
+      background-image: url("../images/banner.jpg");
+      /*背景吸附 默认值为scroll
+      fixed:背景图片不会随屏幕的滚动而滚动
+       background-attachment: scroll|fixed*/
+      background-attachment: scroll;
+    }
+    .two{
+      height: 800px;
+      background: pink;
+    }
+  </style>
+</head>
+<body>
+<div class="one"></div>
+<div class="two"></div>
+</body>
+</html>

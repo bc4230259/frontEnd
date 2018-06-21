@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器</title>
+  <style>
+    /*兄弟选择器
+    div+p{}
+    1.div和p同级
+    2.选中div后的第一个p元素
+    */
+    div+p{
+      color: red;
+    }
+    /*div~p{}
+    1.div和p同级
+    2.选中div后的所有p元素
+    */
+    div~p{
+      color: red;
+    }
+
+
+  </style>
+</head>
+<body>
+<div>hello world</div>
+<p>ppp</p>
+<p>ppp</p>
+<p>ppp</p>
+<p>ppp</p>
+<p>ppp</p>
+<p>ppp</p>
+</body>
+</html>

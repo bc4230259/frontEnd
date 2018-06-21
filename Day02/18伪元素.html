@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素</title>
+  <style>
+    div:before{
+      content:'前面';
+      display: block;
+      margin-bottom: 20px;
+    }
+    /*伪元素为客户自己定义生成的元素，并不是html预定义好的元素*/
+    div:after{
+      content: '后面';
+      display: block;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+<div>hello world</div>
+</body>
+</html>

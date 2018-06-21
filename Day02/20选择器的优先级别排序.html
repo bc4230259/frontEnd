@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    p{
+      color: red !important;
+    }
+    .one{
+      color: yellow;
+    }
+    #two{
+      color: green;
+    }
+    /*优先级别为
+    !important> id 选择器 > class选择器> 元素选择器
+    */
+  </style>
+</head>
+<body>
+<p class="one" id="two">hello world</p>
+</body>
+</html>
