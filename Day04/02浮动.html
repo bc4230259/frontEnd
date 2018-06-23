@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动</title>
+  <style>
+    .parent{
+      width: 1200px;
+      background: red;
+      height: 200px;
+    }
+    .child{
+      width: 100px;
+      height: 50px;
+      background: yellow;
+      float: left;
+    }
+    .two{
+      /*clear: both 让该元素不受其他元素浮动的影响/清除浮动的样式
+      只用对紧靠着的元素使用*/
+      clear: both;
+      width: 150px;
+      height: 150px;
+      background: green;
+    }
+  </style>
+</head>
+<body>
+<!--目的：为了让元素并排显示-->
+<!--原理
+    子元素浮动，父元素没有了高度-->
+<div class="parent">
+  <div class="child"></div>
+  <div class="two"></div>
+</div>
+</body>
+</html>

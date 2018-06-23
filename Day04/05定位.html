@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位</title>
+  <style>
+    .parent{
+      width: 200px;
+      height: 200px;
+      background: red;
+      /*相对定位就是元素在页面上正常的位置
+      position:relative*/
+      position: relative;
+      left: 100px;
+      top: 100px;
+    }
+    .child{
+      right: 0px;
+      /*top: 50px;*/
+      bottom: 0px;
+      width: 100px;
+      height: 100px;
+      background: yellow;
+      /*绝对定位：绝对定位的元素的位置相对于最近的相对定位的父元素
+      相对定位和绝对定位一般是成对出现，父元素相对定位，子元素绝对定位
+      */
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+<div class="parent">
+  <div class="child">
+
+  </div>
+</div>
+</body>
+</html>

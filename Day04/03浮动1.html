@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动1</title>
+  <style>
+    /*子元素浮动，让父元素有高度
+    给父元素添加overflow:hidden;
+    给父元素添加after伪元素并设置伪元素clear:both display:table
+    */
+    .parent{
+      /*overflow: hidden;*/
+      width: 300px;
+      background: red;
+    }
+    .child{
+      width: 100px;
+      height: 50px;
+      background: yellow;
+      float: left;
+    }
+    .row:after{
+      content: '';
+      display: table;
+      clear: both;
+    }
+    .one{
+      width: 60px;
+      height: 60px;
+      background: green;
+    }
+  </style>
+</head>
+<body>
+<div class="parent row">
+  <div class="child"></div>
+  <div class="one"></div>
+</div>
+</body>
+</html>

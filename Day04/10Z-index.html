@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Z-index</title>
+  <style>
+    .parent{
+      width: 300px;
+      height: 300px;
+      background: red;
+      position: relative;
+    }
+    .one{
+      width: 100px;
+      height: 100px;
+      background: yellow;
+      position: absolute;
+      z-index: 100;
+    }
+    .two{
+      width: 50px;
+      height: 50px;
+      background: green;
+      position: absolute;
+      z-index: 199;
+    }
+    .parent:hover .two{
+      z-index: 99;
+    }
+
+  </style>
+</head>
+<body>
+<!--Z-index -->
+<!--功能：给那些设置了绝对定位的元素设置元素的堆叠顺序  -->
+<div class="parent">
+  <div class="one"></div>
+  <div class="two"></div>
+</div>
+
+</body>
+</html>
