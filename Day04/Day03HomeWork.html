@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HomeWork</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background: lightseagreen;
+      text-align: center;
+    }
+
+    .header > img {
+      margin: 5px 0px;
+    }
+
+    .nav-wrap {
+      background: #E3E3E3;
+    }
+
+    .nav {
+      height: 40px;
+      width: 1000px;
+      text-align: center;
+      line-height: 40px;
+      margin: auto;
+      /*overflow: hidden;*/
+    }
+
+    .nav > a {
+      text-decoration: none;
+      font-size: 18px;
+      margin-right: 60px;
+      color: #333;
+    }
+
+    .start {
+      float: left;
+      position: relative;
+    }
+
+    .start > .icon {
+      display: block;
+      width: 19px;
+      height: 19px;
+      background-image: url("images/location.png");
+      position: absolute;
+      top: 50%;
+      margin-top: -10px;
+    }
+
+    .end {
+      float: right;
+      position: relative;
+    }
+
+    .end > .icon {
+      display: block;
+      width: 19px;
+      height: 19px;
+      background-image: url("images/adm.png");
+      position: absolute;
+      top: 50%;
+      margin-top: -10px;
+    }
+
+    .first {
+      margin-left: 30px;
+    }
+
+    .text {
+      margin-right: 10px;
+    }
+
+    .container {
+      width: 1000px;
+      margin: auto;
+    }
+
+    .topnav {
+      line-height: 40px;
+    }
+    .filter{
+      background: #E3E3E3;
+      margin-bottom: 20px;
+    }
+
+    .filter>ul{
+      list-style:none;
+      overflow: hidden;
+    }
+    .filter li{
+      float: left;
+      margin: 3px;
+      text-align: center;
+      padding: 3px;
+      cursor: pointer;
+
+    }
+    ul>.first{
+      margin-left: 20px;
+      color: lightseagreen;
+    }
+    li>.icon{
+      display: inline-block;
+      width: 14px;
+      height: 9px;
+      background-image: url("images/indexSelect.png");
+    }
+    .filter .active{
+      border: 2px solid orange;
+      background: white;
+    }
+    .search{
+      background: #e3e3e3;
+      height: 40px;
+      line-height: 40px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .search>.inputsearch{
+      float: left;
+    }
+    .search>span{
+      float: left;
+      display: block;
+      margin-left: 10px;
+    }
+    .search .down{
+      display: inline-block;
+      width: 14px;
+      height: 7px;
+      background-image: url("images/downicon.png");
+    }
+    .search .up{
+      display: inline-block;
+      width: 13px;
+      height: 7px;
+      background-image: url("images/upicon.png");
+    }
+    .inputsearch{
+      position: relative;
+      height: 40px;
+      width: 200px;
+      display: block;
+      margin-left: 120px;
+
+    }
+    .inputsearch input{
+      width: 200px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      box-sizing: border-box;
+      outline: none;
+    }
+    .inputsearch button{
+      position: absolute;
+      height: 18px;
+      right: 2px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      border: none;
+      background: white;
+      line-height: 18px;
+    }
+    button .icon{
+      position: absolute;
+      left: 0px;
+      top: 0;
+      bottom: 0;
+      margin: auto 2px auto 0px;
+      width: 14px;
+      height: 14px;
+      background-image: url("images/search.png");
+    }
+    button span{
+      margin-left: 18px;
+      padding: 5px;
+    }
+    .query{
+      float: right;
+      margin-right: 20px;
+      height: 40px;
+      position: relative;
+    }
+    .query>.icon{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 19px;
+      height: 19px;
+      background-image: url("images/wenhao.png");
+    }
+    .query>a{
+      margin-left: 23px;
+      text-decoration: none;
+      color: lightseagreen;
+      font-size: 17px;
+    }
+    .itemlist{
+      overflow: hidden;
+    }
+    .item{
+      float: left;
+      width: 238px;
+      height: 350px;
+      margin-right: 16px;
+      margin-bottom: 20px;
+      background: #eee;
+      border: 2px solid #e3e3e3;
+      box-sizing: border-box;
+    }
+    .last{
+      margin-right: 0px;
+    }
+    .item>img{
+      display: block;
+      margin: 15px auto 5px auto;
+    }
+    .item>.content{
+      margin: 5px 15px;
+    }
+    .content>p{
+      margin: 2px 0px;
+    }
+
+    .content>p:last-child{
+      font-size: 18px;
+      font-weight: bold;
+      color: lightseagreen;
+    }
+    .content>p:last-child>span{
+      font-weight: normal;
+      font-size: 15px;
+      margin-left: 10px;
+    }
+    .item>.active p{
+      color: orange!important;
+    }
+    .goto{
+      height: 30px;
+      line-height: 30px;
+    }
+    .goto>button{
+      box-sizing: border-box;
+      height: 30px;
+      width: 100px;
+      background: #e3e3e3;
+      border: none;
+      margin-right: 30px;
+    }
+    .goto>.page{
+      display: inline-block;
+      margin-right: 20px;
+      height: 30px;
+    }
+    .page>a{
+      color: #333;
+      width: 15px;
+      display: inline-block;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+    .goto>input{
+      width: 20px;
+    }
+    .goto>.confirm{
+      margin-left: 35px;
+      height: 28px;
+      border: none;
+      background: orange;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .qr{
+      overflow: hidden;
+      margin: 20px 15px;
+    }
+    .qr>img{
+      border: 1px solid #333;
+      float: left;
+      padding: 2px;
+      margin-right: 20px;
+    }
+    .qr>.t{
+      color: lightseagreen;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    .footer{
+      background: #555555;
+      color: white;
+    }
+    .foot{
+      width: 1000px;
+      margin: auto;
+      overflow: hidden;
+      border-bottom: 1px solid #e3e3e3;
+    }
+    .foot>.flogo{
+      float: left;
+      margin: 30px 60px 30px 15px ;
+      width: 440px;
+      height: 150px ;
+    }
+    .flogo>img {
+      margin: 20px 20px 20px 0px;
+    }
+    .flogo>.s{
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .foot>.fnav{
+      float: left;
+      margin-top: 80px;
+      margin-right: 40px;
+    }
+    .fnav>p{
+      margin-bottom: 20px;
+    }
+    .fnav>p>span{
+      margin-right: 60px;
+    }
+    .foot>.shop{
+      float: left;
+      margin-top: 78px;
+      font-weight: bold;
+    }
+    .foot>.shop>p{
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .wechat{
+      display: inline-block;
+      position: absolute;
+      width: 28px;
+      height: 24px;
+      background-image: url("images/weixin2.png");
+      top: 0;
+      bottom: 0;
+      margin: auto 0px;
+    }
+    .tmall{
+      display: inline-block;
+      position: absolute;
+      width: 24px;
+      height: 25px;
+      background-image: url("images/tianmao.png");
+      top: 0;
+      bottom: 0;
+      margin: auto 0px;
+    }
+    .youzan{
+      display: inline-block;
+      position: absolute;
+      width: 24px;
+      height: 25px;
+      background-image: url("images/shop.png");
+      top: 0;
+      bottom: 0;
+      margin: auto 0px;
+    }
+    .shop>p>span{
+      margin-left: 30px ;
+    }
+    .footer>.copyright{
+      overflow: hidden;
+      width: 1000px;
+      margin: auto;
+      padding: 10px 0px;
+    }
+    .copyright >.cl{
+      float: left;
+      margin-left: 15px;
+    }
+    .copyright>.rl{
+      float: right;
+      margin-right: 15px;
+    }
+  </style>
+</head>
+<body>
+<div class="header">
+  <img src="images/logo.png" alt="">
+</div>
+<div class="nav-wrap">
+  <div class="nav">
+    <div class="start">
+      <i class="icon"></i>
+      <span class="first text">深圳</span>
+      <span class="text">切换</span>
+    </div>
+    <a href="">首页</a>
+    <a href="">咨询</a>
+    <a href="">测评</a>
+    <a href="">商城</a>
+    <div class="end">
+      <i class="icon"></i>
+      <span class="first">个人中心</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="topnav">
+    <span>首页</span>
+    <span> > </span>
+    <span> 预防装修污染 </span>
+    <span> > </span>
+    <span> 材料库 </span>
+  </div>
+
+<div class="filter">
+     <ul>
+       <li class="first">类别</li>
+       <li>全部</li>
+       <li class="active">地板</li>
+       <li>涂料</li>
+       <li>墙纸</li>
+       <li>瓷砖</li>
+       <li>粘胶剂</li>
+       <li>油漆</li>
+       <li>家具</li>
+       <li>板材</li>
+       <li>饰品 <i class="icon"></i></li>
+     </ul>
+     <ul>
+       <li class="first">类型</li>
+       <li>全部</li>
+     </ul>
+     <ul>
+       <li class="first">材质</li>
+       <li>全部</li>
+       <li class="active">实木</li>
+       <li>复合</li>
+       <li>强化</li>
+       <li>其他</li>
+     </ul>
+     <ul>
+       <li class="first">品牌</li>
+       <li>全部</li>
+       <li class="active">圣像</li>
+       <li>大自然</li>
+       <li>生活家</li>
+       <li>北美风情</li>
+       <li>德尔</li>
+       <li>博典</li>
+       <li>船王</li>
+     </ul>
+</div>
+  <div class="search">
+    <span>发布时间 <i class="down"></i></span>
+    <span>价格 <i class="up"></i></span>
+    <span>环保节能 <i class="up"></i></span>
+    <div class="inputsearch">
+      <input type="text">
+      <button><i class="icon"></i><span>搜索</span></button>
+    </div>
+    <div class="query">
+      <i class="icon"></i>
+      <a href="#">了解家居医生建材环保评级标准</a>
+    </div>
+  </div>
+  <div class="itemlist">
+    <div class="item">
+      <img src="images/data_image.png" alt="">
+      <div class="content active">
+      <p><span>德尔</span><span style="margin-left: 20px">都市系列3001</span></p>
+      <p>木地板 - 复合地板</p>
+      <p style="margin-bottom: 20px">单价：128元/㎡</p>
+      <p>环保评级：B <span>(可以使用)</span></p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/data_image.png" alt="">
+      <div class="content">
+      <p><span>德尔</span><span style="margin-left: 20px">都市系列3001</span></p>
+      <p>木地板 - 复合地板</p>
+      <p style="margin-bottom: 20px">单价：128元/㎡</p>
+      <p>环保评级：B <span>(可以使用)</span></p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/data_image.png" alt="">
+      <div class="content">
+      <p><span>德尔</span><span style="margin-left: 20px">都市系列3001</span></p>
+      <p>木地板 - 复合地板</p>
+      <p style="margin-bottom: 20px">单价：128元/㎡</p>
+      <p>环保评级：B <span>(可以使用)</span></p>
+      </div>
+    </div>
+    <div class="item last">
+      <img src="images/data_image.png" alt="">
+      <div class="content">
+      <p><span>德尔</span><span style="margin-left: 20px">都市系列3001</span></p>
+      <p>木地板 - 复合地板</p>
+      <p style="margin-bottom: 20px">单价：128元/㎡</p>
+      <p>环保评级：B <span>(可以使用)</span></p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/data_image.png" alt="">
+      <div class="content">
+      <p><span>德尔</span><span style="margin-left: 20px">都市系列3001</span></p>
+      <p>木地板 - 复合地板</p>
+      <p style="margin-bottom: 20px">单价：128元/㎡</p>
+      <p>环保评级：B <span>(可以使用)</span></p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/data_image.png" alt="">
+      <div class="content">
+      <p><span>德尔</span><span style="margin-left: 20px">都市系列3001</span></p>
+      <p>木地板 - 复合地板</p>
+      <p style="margin-bottom: 20px">单价：128元/㎡</p>
+      <p>环保评级：B <span>(可以使用)</span></p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/data_image.png" alt="">
+      <div class="content">
+      <p><span>德尔</span><span style="margin-left: 20px">都市系列3001</span></p>
+      <p>木地板 - 复合地板</p>
+      <p style="margin-bottom: 20px">单价：128元/㎡</p>
+      <p>环保评级：B <span>(可以使用)</span></p>
+      </div>
+    </div>
+    <div class="item last">
+      <img src="images/data_image.png" alt="">
+      <div class="content">
+      <p><span>德尔</span><span style="margin-left: 20px">都市系列3001</span></p>
+      <p>木地板 - 复合地板</p>
+      <p style="margin-bottom: 20px">单价：128元/㎡</p>
+      <p>环保评级：B <span>(可以使用)</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="goto">
+  <button>上一页</button>
+    <div class="page">
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+    </div>
+  <button>下一页</button>
+    <span>共有10页，去第</span>
+    <input type="text">
+    <span>页</span>
+    <button class="confirm">确定</button>
+  </div>
+  <div class="qr">
+    <img src="images/small_weixin.png" alt="">
+    <p class="t">建材检测 需求反馈</p>
+    <P>亲爱的用户，我们正在不断的完善和更新建材库</P>
+    <p>若没有找到您想要的材料信息，请将您想测的建材告诉我们。</p>
+  </div>
+</div>
+  <div class="footer">
+    <div class="foot">
+      <div class="flogo">
+        <img src="images/footerLogo.png" alt="">
+        <p class="s">为室内环境健康把好每一关</p>
+        <p>家居医生致力于中国人的家居健康问题，通过专业的技术研究和测评，倾力协助大众打造绿色、环保的人居生活环境。</p>
+      </div>
+      <div class="fnav">
+        <p><span>关于我们</span>  <span>版权说明</span></p>
+        <p><span>联系我们</span>  <span>用户隐私</span></p>
+        <p><span>加入我们</span>  <span>免费申明</span></p>
+      </div>
+      <div class="shop">
+        <p><i class="wechat"></i><span>官方微信</span></p>
+        <p><i class="tmall"></i><span>天猫旗舰店</span></p>
+        <p><i class="youzan"></i><span>有赞商城</span></p>
+      </div>
+    </div>
+    <div class="copyright">
+        <div class="cl">
+          <span>深圳建筑科学研究院股份有限公司</span>
+        <span style="margin-left: 15px">家居医生网</span>
+        </div>
+      <div class="rl">
+        <span>粤ICP备08011321号 @Copyright All Rights Reserved</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
