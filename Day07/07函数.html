@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script >
+  //function 函数名()
+  //1.没有返回值的函数
+  function say(){
+    console.log("没有返回值的函数")
+  }
+  say();
+
+  //2.有返回值的函数
+  function eat(){
+    return 20;
+  }
+  console.log(eat());
+  //3.全局变量 函数外定义的变量
+  //局部变量 函数内定义的变量
+  var a=10;
+  function fn(){
+    a = 12;
+    var b=11;
+  }
+  console.log(b);
+</script>
+</body>
+</html>

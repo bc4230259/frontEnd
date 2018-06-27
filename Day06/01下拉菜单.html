@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉菜单</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;}
+    a{text-decoration: none;
+      color: #fff;
+    font-size: 24px}
+
+    ul{
+      width: 1000px;
+      height: 60px;
+      line-height: 60px;
+      margin: auto;
+      background: pink;
+      list-style: none;
+      /*overflow: hidden;*/
+    }
+    li{
+      text-align: center;
+      width: 150px;
+      float: left;
+
+    }
+    .row:after{
+      content: "";
+      display: table;
+      clear: both;
+    }
+    a{
+      display: block;
+    }
+    a:hover{
+      background: #eee;
+    }
+    .menu{
+      position: relative;
+    }
+    .menuDrop{
+      position: absolute;
+      width: 150px;
+      background: deeppink;
+      display: none;
+    }
+    .menu:hover .menuDrop{
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<ul class="row">
+<li class="menu">
+  <a href="">收藏夹</a>
+  <div class="menuDrop">
+    <a href="">收藏宝贝</a>
+    <a href="">收藏店铺</a>
+  </div>
+</li>
+<li><a href="">卖家中心</a></li>
+<li><a href="">联系克服</a></li>
+</ul>
+</body>
+</html>

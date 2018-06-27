@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script >
+
+  //强制转换
+  // String，Boolean 转换成 number
+  //true-->1 false-->0
+  //非数字字符串 显示NaN
+  //只能识别纯数字字符串
+  var str = "10.43px";
+  var b=true;
+  console.log(Number(str));
+  console.log(Number(b));
+  //字符串转number 方法2
+  //会截取字符串中的第一个数字 转成整型
+  console.log(parseInt(str));
+//方法3 转成浮点数 但方法2 3 要求是字符串开头第一个字符必须是数字
+  console.log(parseFloat(str));
+
+  //任意类型 转 string
+  //1.方式1 tostring
+  var a=10;
+  console.log(a.toString());
+  //2.方式2 String()
+  console.log(String(a));
+
+  //任意类型转换成布尔型
+  //Boolean()
+  //js中，只有5种值是false  "",0,NaN,undefined,null
+
+  var a=[1,2,3];
+  console.log(Boolean(a));
+
+  var obj={
+    name:"xiao"
+  }
+  console.log(Boolean(obj));
+  console.log(Boolean(""));
+  console.log(Boolean(0));
+  console.log(Boolean(NaN));
+  console.log(Boolean(undefined));
+  console.log(Boolean(null));
+
+  //自动转换
+  //js在算术计算中会将参与计算的值先转换为number类型，再计算
+  var a="10";
+  var b=true;
+  var c=a-b;
+  console.log(c)
+
+  //特殊：在+运算中 倘若有一个参数为字符串 则执行字符串的拼接操作 结果为字符串
+
+  var d=a+b;
+  console.log(d);
+  //比较运算
+  //比较运算的自动转换：默认先将所有的类型转换为number再比较
+  var a="10";
+  var b=true;
+  console.log(a>b);
+
+</script>
+
+</body>
+</html>

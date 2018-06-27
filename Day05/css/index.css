@@ -1,0 +1,153 @@
+*{
+  margin: 0;
+  padding: 0;}
+ul{
+  list-style: none;
+  padding-top: 27px;
+  padding-bottom: 24px;
+  line-height: 40px;
+  height: 40px;
+}
+ul>li{
+  display: inline-block;
+  width: 96px;
+  height: 27px;
+  font-size: 24px;
+  line-height: 27px;
+}
+.active{
+  color: orange;
+}
+.line{
+  color: #e3e3e3;
+}
+.content{
+  background: url("../../images/banner.png") no-repeat;
+  position: relative;
+  overflow: hidden;
+  height: 589px;
+  width: 1920px;
+  margin: auto ;
+}
+.login{
+  width: 400px;
+  border: 1px solid #eeeeee;
+  margin: 30px 10px 0 0 ;
+  text-align: center;
+  background: white;
+  position: absolute;
+  right: 20%;
+}
+fieldset{
+  border: none;
+  width: 380px;
+  margin: 0px auto;
+}
+input{
+  width: 346px;
+  height: 48px;
+  margin-top: 25px;
+}
+.log{
+  background: #ef5b00;
+  color: white;
+  border: none;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.logininfo{
+  overflow: hidden;
+  width: 346px;
+  margin: 0 auto 100px auto;
+
+}
+.pull-left{
+  float: left;
+
+}
+.pull-right{
+  float: right;
+}
+.fieldset{
+  border-top: 1px solid #333333;
+}
+.footer{
+
+}
+.footer>a{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: #333;
+  border-radius: 50%;
+  position: relative;
+  margin: 10px 20px;
+}
+.footer span{
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url("../../images/icons_type.png") no-repeat;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+}
+.footer .qq{
+  background-position-x: -19px;
+}
+.footer .weibo{
+  background-position-x: -38px;
+}
+.footer .zhifu{
+  width: 25px;
+  background-position-x: -57px;
+  /*margin-left: -12.5px;*/
+}
+.footer .weixin{
+  width: 23px;
+  background-position-x: -84px;
+  /*margin-left: -11.5px;*/
+}
+
+.header{
+  height: 98px;
+  margin-left: 140px;
+  position: relative;
+}
+.header>img{
+  height: 49px;
+  width: 49px;
+  background: orange;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.header>div{
+  position: absolute;
+  height: 50px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0 auto 55px;
+}
+.header>div>p{
+  line-height: 20px;
+  font-size: 10px;
+}
+.header .mishop{
+  line-height: 30px;
+  font-size: 30px;
+}
+.body-footer{
+  height: 60px;
+  width: 650px;
+  margin: 50px auto;
+}
+.body-footer>p{
+  text-align: center;
+}
+.body-footer>p>span{margin-right: 20px}
+

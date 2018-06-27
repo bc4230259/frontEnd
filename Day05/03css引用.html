@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>引用</title>
+  <style>
+    /*内部样式*/
+    div{
+    width: 100px;
+    height: 100px;
+    background: red;
+    }
+  </style>
+    <!--外部样式表 推荐使用-->
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--内联样式
+不要这样写-->
+<div style="width: 100px;height: 100px;background: red;"></div>
+<!--内部样式-->
+<div>hello world</div>
+</body>
+</html>

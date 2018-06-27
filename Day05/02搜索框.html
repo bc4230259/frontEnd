@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索框</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;}
+
+    div{
+      width: 200px;
+      height: 25px;
+      position: relative;
+    }
+    div>input{
+      padding-left: 20px;
+      height: 25px;
+      width: 200px;
+      position: absolute;
+      border: none;
+      background: #eee;
+      border-radius: 40px;
+      box-sizing: border-box;
+    }
+    div>button{
+      position: absolute;
+      right: 20px;
+      width: 23px;
+      height: 22px;
+      background-image: url("../images/icon4.png");
+      z-index: 100;
+      border: none;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <input type="text" placeholder="搜索">
+  <button></button>
+</div>
+</body>
+</html>

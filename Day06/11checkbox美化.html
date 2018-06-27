@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    input{
+      display: none;}
+    label{
+      padding-left: 20px;
+      background: url("../images/off.png") no-repeat;
+    }
+    .check input:checked+label{
+      background: url("../images/on.png") no-repeat;
+    }
+  </style>
+</head>
+<body>
+<div class="check">
+  <input type="checkbox" id="c">
+  <label for="c">请勾选</label>
+</div>
+</body>
+</html>

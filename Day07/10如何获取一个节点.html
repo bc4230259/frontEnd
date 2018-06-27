@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <p id="test" class="one">hello world</p>
+  <p  class="one">hello world</p>
+  <button id="btn">change</button>
+<script >
+  //1.如何获取一个节点
+  //通过ID获取
+  var test=document.getElementById("test");
+  console.log(test);
+  //通过标签名获取 获取一个集合
+  var p=document.getElementsByTagName("p");
+  p[1].innerHTML="he";
+  console.log(p);
+  //通过className获取
+  var ps=document.getElementsByClassName("one");
+  ps[1].innerHTML="ha";
+
+  //通过选择器去获取
+  var one=document.querySelectorAll(".one");
+  console.log(one);
+  //2.修改元素的内容
+  test.innerHTML="change";
+  var btn=document.getElementById("btn");
+  btn.onclick=function(){
+    test.innerHTML="haha";
+  }
+</script>
+</body>
+</html>
